@@ -30,7 +30,7 @@ void setup() {
 void loop() {
     // Wait on ui
     if(ui_poll()){
-        if(bswitch == A){
+        if(bswitch == A){   // Autonomous operations
             if(b1)
                 servo_shake();
     
@@ -40,12 +40,13 @@ void loop() {
             else if(b3)
                 servo_empty();
         }
-        else{
+
+        else{               // Manual control switch activated
             if(b1)
-                servo_goto(servo_pos + 15);
+                servo_goto(servo_pos + STEP);
    
             else if(b2)
-               servo_goto(servo_pos - 15);
+               servo_goto(servo_pos - STEP);
         }
     }
 }

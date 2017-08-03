@@ -18,8 +18,9 @@
 #define pin_green 9
 #define pin_red 10
 #define pin_vibrator 12
+#define STEP 15		// Manual step size
 
-// States
+// States (deprecated)
 #define ST_SHAKE 1
 #define ST_DELIVER 2        
 #define ST_EMPTY 0
@@ -42,7 +43,7 @@
 #define SERVO_EMPTY_DELAY_LONG 2000
 
 //============================================
-// Test bench parameters
+// Test bench parameters (deprecated)
 #define SERVO_SHAKE_TIME 4000
 #define SERVO_SHAKE_NB 10 
 #define SERVO_SHAKE_OFFSET 30
