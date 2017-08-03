@@ -13,5 +13,14 @@ extern bool bswitch;
 #define RED_OFF digitalWrite(pin_red,LOW)
 
 // === PUBLIC FUNCTIONS ===
+
+/** \brief Init the UI shield pins
+*/
 void ui_init();
+
+/** \brief Poll the 4 buttons, return 0 if nothing, or button number
+*
+*	Not using interrupts, as the UNO has only 2 interrupt pins, and no computation
+* 	done in loop
+*/
 int ui_poll();

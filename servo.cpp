@@ -11,17 +11,10 @@
 
 
 // === PUBLIC FUNCTIONS ===
-// Sends servo to pos, between 0 and 1023
 void servo_goto(int pos){
     writeData (SERVO_ID, AX_GOAL_POSITION_L, 2, pos);
     servo_pos = pos;
 }
-
-// NEEDED
- /*
-void servo_set_speed(int speed){
-    writeData (SERVO_ID, AX_GOAL_SPEED_L, 2, speed);
-}*/
 
 void servo_init(){
     RED_ON;
@@ -72,3 +65,9 @@ void servo_empty(){
     VIBRATOR_OFF;
     RED_OFF;
 }
+
+// NEEDED
+ /*
+void servo_set_speed(int speed){
+    writeData (SERVO_ID, AX_GOAL_SPEED_L, 2, speed);
+}*/
